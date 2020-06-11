@@ -21,8 +21,10 @@ docker exec -it postgres /bin/bash
 
 // Outra imagem
 docker run \
-    -name adminer \
+    --name adminer \
     -p 8080:8080 \
     --link postgres:postgres \
     -d \
     adminer
+
+docker run --name adminer -p 8080:8080 --link postgres:postgres -d adminer
